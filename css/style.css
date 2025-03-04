@@ -1,0 +1,238 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+    margin: 0;
+    font-family: "Dosis", sans-serif;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+#preloader {
+    background: #f8f8f8 url(../images/loader.gif) no-repeat center center;
+    background-size: 5%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.pre-page .inner {
+    display: flex;
+    height: 100vh;
+}
+
+.pre-page .icon {
+    display: block;
+    margin: auto;
+}
+
+.pre-page .right-graph {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 11;
+    width: 35vw;
+}
+
+.pre-page .left-graph {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 11;
+    width: 35vw;
+}
+
+#env_middle {
+    vertical-align: bottom;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    opacity: 0.5;
+    object-fit: fill;
+}
+
+#env_top {
+    width: 100%;
+    vertical-align: top;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    opacity: 0.5;
+    overflow: visible;
+}
+
+/* Hacer elementos invisibles antes de mostrar */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+/* Mostrar elementos con animación */
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animaciones para cada elemento */
+#left_graph.show {
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+#right_graph.show {
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+#env_middle.show {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#env_top.show {
+    animation: slideInDown 1.5s ease-in-out;
+}
+
+#inner_elements.show {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@media (max-width: 991px) {
+    #env_middle {
+        display: none;
+    }
+
+    #env_top {
+        height: 35vh;
+        width: 100%;
+        margin: auto;
+        object-fit: cover;
+    }
+
+    .pre-page-content {
+        padding: 0 10%;
+    }
+
+    .welcome-text {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .pre-page .right-graph {
+        width: 50%;
+    }
+
+    .pre-page .left-graph {
+        width: 50%;
+    }
+}
+
+/* Definición de animaciones */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación para el sello */
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(1.0);
+    }
+
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+.animate-zoom-in-out {
+    animation: zoom-in-zoom-out 2s ease infinite;
+}
+
+img,
+svg {
+    vertical-align: middle;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.pre-page-content {
+    text-align: center;
+    padding: 0 5%;
+    position: relative;
+    z-index: 16;
+}
+
+.welcome-text {
+    font-family: var(--body-font-family);
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.welcome-text-p {
+    font-family: var(--body-font-family);
+}
+
+.stamp {
+    position: relative;
+    width: 120px;
+    margin: auto;
+    display: flex;
+    z-index: 11;
+    cursor: pointer;
+}

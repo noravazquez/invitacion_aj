@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adriana y José</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="preloader"></div>
+
+    <div class="pre-page" id="pre-page">
+        <img src="images/flore-izquierda.png" class="left-graph hidden" id="left_graph">
+        <img src="images/flor-derecha.png" class="right-graph hidden" id="right_graph">
+        <img src="images/envelope-middle.png" class="envelope hidden" id="env_middle">
+        <img src="images/envelope-top.png" class="envelope hidden" id="env_top">
+
+        <div class="inner hidden" id="inner_elements">
+            <span class="icon">
+                <div class="pre-page-content">
+                    <br><br>
+                    <p class="welcome-text">Adriana & José Luis</p>
+                    <p class="welcome-text-p">Renovarán votos y te invitan a celebrar con ellos este gran día.</p>
+                    <br>
+                </div>
+                <img src="images/sello.png" class="welcome-element stamp animate-zoom-in-out" id="sello">
+            </span>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener("load", function () {
+            document.getElementById("preloader").style.display = "none";
+
+            document.querySelectorAll(".hidden").forEach(el => {
+                el.classList.add("show");
+            });
+        });
+
+        document.getElementById("sello").addEventListener("click", function () {
+            document.getElementById("left_graph").classList.add("hidden");
+            document.getElementById("right_graph").classList.add("hidden");
+            document.getElementById("env_middle").classList.add("hidden");
+            document.getElementById("env_top").classList.add("hidden");
+            document.getElementById("inner_elements").classList.add("hidden");
+
+            // Opcional: Puedes ocultar la pantalla de bienvenida completamente si quieres
+            setTimeout(() => {
+                document.getElementById("pre-page").style.display = "none";
+            }, 500); // Esperar un poco para las animaciones antes de esconder todo
+        });
+    </script>
+
+</body>
+
+</html>
