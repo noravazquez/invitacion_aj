@@ -197,6 +197,10 @@ body {
     }
 }
 
+.fade-out {
+    opacity: 0;
+}
+
 .animate-zoom-in-out {
     animation: zoom-in-zoom-out 2s ease infinite;
 }
@@ -226,6 +230,7 @@ img {
 
 .welcome-text-p {
     font-family: var(--body-font-family);
+    font-style: italic;
 }
 
 .stamp {
@@ -246,4 +251,94 @@ nav.navbar-page {
 
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* Seccion Hero*/
+.hero-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: #f8f5f2;
+}
+
+.flower {
+    position: absolute;
+    width: auto;
+    height: 75vh;
+    opacity: 0.9;
+}
+
+.left-flower {
+    left: 0;
+    bottom: 0;
+}
+
+.right-flower {
+    right: 0;
+    top: 62px;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 70%;
+    margin: auto;
+    z-index: 1;
+    background: #B8B8B8;
+    padding: 10px;
+}
+
+.hero-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.hero-logo {
+    width: 20vw;
+    margin-top: 10px;
+}
+
+/* 📱 Tablets y pantallas medianas (768px - 1024px) */
+@media (max-width: 1024px) {
+    .flower {
+        height: 60vh;
+    }
+    .hero-text {
+        font-size: 1.8rem;
+    }
+    .hero-logo {
+        width: 20vw;
+    }
+}
+
+/* 📱 Móviles grandes (480px - 767px) */
+@media (max-width: 767px) {
+    .flower {
+        height: 50vh;
+        transform: rotate(270deg);
+    }
+    .hero-text {
+        font-size: 1.5rem;
+    }
+    .hero-logo {
+        width: 25vw;
+    }
+}
+
+/* 📱 Móviles pequeños (menos de 480px) */
+@media (max-width: 480px) {
+    .flower {
+        height: 45vh;
+        transform: rotate(270deg);
+    }
+    .hero-text {
+        font-size: 1.5rem;
+    }
+    .hero-logo {
+        width: 30vw;
+    }
 }
