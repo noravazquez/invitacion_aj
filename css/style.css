@@ -1,8 +1,5 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    height: 100%;
     background-color: #f8f8f8;
     margin: 0;
     font-family: "Dosis", sans-serif;
@@ -279,7 +276,7 @@ nav.navbar-page {
 
 .right-flower {
     right: 0;
-    top: 62px;
+    top: 0;
 }
 
 .hero-content {
@@ -302,6 +299,104 @@ nav.navbar-page {
     margin-top: 10px;
 }
 
+.historia-section {
+    padding: 2rem;
+    margin-top: 0;
+    background-color: #ffffff;
+}
+
+.nuestra-historia {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    background-color: #D7CEC7;
+}
+
+.nuestra-historia img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.nuestra-historia p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    padding: 1rem;
+    text-align: center;
+}
+
+.texto-renovar {
+    text-align: center;
+    font-weight: 600;
+    font-size: medium;
+}
+
+.texto-pareja {
+    font-family: 'Great Vibes', cursive;
+    font-size: xxx-large;
+    text-align: center;
+}
+
+.texto-dia {
+    font-size: larger;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 5px 0px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    margin-right: 20px;
+}
+
+.texto-fecha {
+    font-size: xx-large;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.texto-dia-numero {
+    font-size: xxx-large;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.cont-temporizador {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.cont-temporizador .bloque {
+    margin: 0px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cont-temporizador .bloque div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(80, 80, 80);
+    box-shadow: 0px 0px 6px 2px #727272 inset;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    width: 100px;
+    height: 70px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.cont-temporizador .bloque p {
+    font-size: 11px;
+    font-weight: bold;
+    color: #dedede;
+}
+
 /* 📱 Tablets y pantallas medianas (768px - 1024px) */
 @media (max-width: 1024px) {
     .flower {
@@ -310,8 +405,32 @@ nav.navbar-page {
     .hero-text {
         font-size: 1.8rem;
     }
-    .hero-logo {
-        width: 20vw;
+}
+
+@media(min-width: 992px) {
+    .nuestra-historia {
+        flex-wrap: nowrap;
+    }
+
+    .nuestra-historia img {
+        width: 100%;
+    }
+
+    .nuestra-historia p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .nuestra-historia img {
+        margin-bottom: 1.5rem;
+    }
+
+    .nuestra-historia p {
+        text-align: center;
     }
 }
 
