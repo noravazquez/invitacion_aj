@@ -118,29 +118,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script>
-        window.addEventListener("load", function () {
-            document.getElementById("preloader").style.display = "none";
-
-            document.querySelectorAll(".hidden").forEach(el => {
-                el.classList.add("show");
-            });
-        });
-
-        document.getElementById("sello").addEventListener("click", function () {
-            document.getElementById("left_graph").classList.add("fade-out");
-            document.getElementById("right_graph").classList.add("fade-out");
-            document.getElementById("env_middle").classList.add("fade-out");
-            document.getElementById("env_top").classList.add("fade-out");
-            document.getElementById("inner_elements").classList.add("fade-out");
-
-            // Opcional: Puedes ocultar la pantalla de bienvenida completamente si quieres
-            setTimeout(() => {
-                document.getElementById("pre-page").style.display = "none";
-                document.getElementById("content-page").style.display = "block"; // Mostramos el contenido
-            }, 500);  // Esperar un poco para las animaciones antes de esconder todo
-        });
-    </script>
+    <script src="app.js"></script>
 </body>
 
 </html>

@@ -366,11 +366,12 @@ nav.navbar-page {
 .cont-temporizador {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 2vh; /* Usar vh para altura relativa */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
 }
 
 .cont-temporizador .bloque {
-    margin: 0px 4px;
+    margin: 0 1vw; /* Unidades relativas para margen */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -380,21 +381,25 @@ nav.navbar-page {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(80, 80, 80);
-    box-shadow: 0px 0px 6px 2px #727272 inset;
-    color: #ffffff;
-    font-size: 40px;
+    background-color: #C0B0A9;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, 
+                rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, 
+                rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    color: #F9F7F4;
+    font-size: 4vw; /* Tamaño de fuente dinámico */
     font-weight: bold;
-    width: 100px;
-    height: 70px;
-    margin-bottom: 10px;
+    width: 15vw; /* Ancho relativo */
+    height: 10vw; /* Alto relativo */
+    max-width: 100px; /* Límite máximo */
+    max-height: 70px;
+    margin-bottom: 1vh;
     border-radius: 5px;
 }
 
 .cont-temporizador .bloque p {
-    font-size: 11px;
+    font-size: 1.5vw; /* Tamaño dinámico */
     font-weight: bold;
-    color: #dedede;
+    color: #C4A484;
 }
 
 /* 📱 Tablets y pantallas medianas (768px - 1024px) */
@@ -445,6 +450,25 @@ nav.navbar-page {
     }
     .hero-logo {
         width: 25vw;
+    }
+
+    .cont-temporizador {
+        flex-direction: column; /* Apila los bloques en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .cont-temporizador .bloque {
+        margin: 10px 0;
+    }
+
+    .cont-temporizador .bloque div {
+        font-size: 8vw;
+        width: 20vw;
+        height: 15vw;
+    }
+
+    .cont-temporizador .bloque p {
+        font-size: 5vw;
     }
 }
 
