@@ -506,6 +506,75 @@ nav.navbar-page {
     filter: brightness(0) invert(1);
 }
 
+/* PIE DE PAGINA */
+.footer {
+    background-color: #D7CEC7;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    border-top: 1px solid rgba(107, 91, 84, 0.1);
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.signature {
+    margin-bottom: 2rem;
+}
+
+.love-note {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.2rem;
+    color: #6B5B54;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.couple-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: #6B5B54;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.anniversary {
+    font-family: 'Dosis', sans-serif;
+    color: #6B5B54;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/* CRÉDITOS */
+.credits {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed rgba(107, 91, 84, 0.3);
+}
+
+.handmade {
+    font-family: 'Dosis', sans-serif;
+    color: #6B5B54;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.heart {
+    color: #C4A484;
+    display: inline-block;
+    animation: pulse 1.5s infinite;
+}
+
+/* ANIMACIÓN CORAZÓN */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(2); }
+    100% { transform: scale(1); }
+}
+
 /* 📱 Tablets y pantallas medianas (768px - 1024px) */
 @media (max-width: 1024px) {
     .flower {
@@ -598,6 +667,18 @@ nav.navbar-page {
     }
 
     .event-details p {
+        font-size: 1rem;
+    }
+
+    .love-note {
+        font-size: 1.8rem;
+    }
+    
+    .couple-name {
+        font-size: 1.6rem;
+    }
+    
+    .anniversary {
         font-size: 1rem;
     }
 }
